@@ -38,7 +38,7 @@ A method is actually a function but it is a property of an object. A function ju
 
 3. What is closure?
 
-A function inside another function, where you can access the function's scope from the inside, out
+The area within the scope of a function where values exist within that specific, unless returned.
 
 4. Describe the four rules of the 'this' keyword.
 

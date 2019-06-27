@@ -7,8 +7,9 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-const consume = function(a, b, callback)
-
+const consume = function (num1, num2, callback) {
+  return callback(num1, num2);
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -16,39 +17,30 @@ const consume = function(a, b, callback)
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-function add(x, y, cb) {
-  let adding = (x + y)
-  cb(adding);
-}
-add(2, 6, (numbersAdded) => {
-  console.log(numbersAdded);
-});
+let add = function (a, b) {
+  return a+b;
+};
 
-function multiply(x, y, cb) {
-  let multi = (x * y)
-  cb(multi);
-}
-multiply(2, 6, (numbersMultiplied) => {
-  console.log(numbersMultiplied);
-});
+let multiply = function (a, b) {
+  return a*b;
+};
 
-function greeting(first, last, cb) {
-}
-  console.log(`Hello, ${.first}, ${.last}, nice to meet you!`);
-
+let greeting = function (first, last) {
+  return `Hello ${first} ${last}, nice to meet you!`
+};
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-consume(2,2,add); // 4
-consume(10,16,multiply); // 160
-consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2,2,add)); // 4
+console.log(consume(10,16,multiply)); // 160
+console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!c
 
 
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation:  because they are both nested inside of the myFunction()
 
 // Because with closures, you can access inside functions from the outside
 
