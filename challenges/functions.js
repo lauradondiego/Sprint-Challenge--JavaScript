@@ -43,6 +43,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 // Explanation:  because they are both nested inside of the myFunction()
 
 // Because with closures, you can access inside functions from the outside
+// console
 
 
 const external = "I'm outside the function";
